@@ -36,3 +36,34 @@
 .carousel-inner {
     padding: 1em;
 }
+
+.Trd-title{
+  text-align: center;
+  font-size: 90px;
+  color: white;
+}
+.card-text-coustom{
+  color: rgb(2, 17, 147);
+}
+.card-subtitle-coustom{
+  color: #002956;
+  font-style: bold;
+}
+.card-title-coustom{
+  color: black;
+  font-style: bold;
+}
+.coustom-card{
+  height: 30rem;
+}
+.card-cs{
+  margin-left: 10%;
+}
+.row-cs{
+padding: 110px;
+}
+
+.coustom-card:hover{
+  background: linear-gradient(to bottom, #ffffff 70%,#0fabff 125%);
+  border-color: #000756;
+}
