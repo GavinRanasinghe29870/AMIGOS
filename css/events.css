@@ -72,36 +72,4 @@
   float: right;
   margin: auto;
   }
-  .btn-coustom1:hover{
-  color: white;
-  background-color: black;
-  border-color: black;
-  }
-  .Lt-title{
-  text-align: center;
-  font-size: 60px;
-  color: white;
-  }
-  .color-overlay{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,.2);
-  }
-  
- 
-  
-  .row{
-  width: 85%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  }
-  .col{
-  flex-basis: 25%;
-  padding: 10px;
-  }
-  
   
