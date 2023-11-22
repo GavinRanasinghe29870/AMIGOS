@@ -63,6 +63,12 @@
 padding: 110px;
 }
 
+.Lt-title{
+  text-align: center;
+  font-size: 70px;
+  color: white;
+}
+
 .coustom-card:hover{
   background: linear-gradient(to bottom, #ffffff 70%,#0fabff 125%);
   border-color: #000756;
