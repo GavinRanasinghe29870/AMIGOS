@@ -85,3 +85,10 @@ padding: 110px;
   margin-right: 25px;
   cursor: pointer;
 }
+.sub{
+  display: flex;
+  height: 50px;
+}
+.sub2{
+  height: 50px;
+}
