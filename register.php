@@ -18,4 +18,6 @@ $email = "john.doe@example.com";
 
 $sql = "INSERT INTO reg (phoneno, fname, password,country,gender,dob) VALUES ('$phonenumber', '$fname', '$password', '$country', '$gender', '$dob')";
 
+if ($conn->query($sql) === TRUE) {
+    echo "Data inserted successfully";
 
