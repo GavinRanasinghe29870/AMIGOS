@@ -1,3 +1,4 @@
+/* BG image */
 
 .bgimg-1{
   background-image: url("/images/Bg_1.jpg");
@@ -10,6 +11,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* Navbar */
 .navbar-toggler {
     color: rgba(255, 255, 255, 0.205);
     border-color: rgba(255, 255, 255, 0.829);
@@ -33,10 +35,11 @@
     background-color: #000000;
     border-color: #000000;
   }
+  /* Carousel */
 .carousel-inner {
     padding: 1em;
 }
-
+/* Trending prod. Cards */
 .Trd-title{
   text-align: center;
   font-size: 90px;
@@ -62,7 +65,7 @@
 .row-cs{
 padding: 110px;
 }
-
+/* latest event carousel*/
 .Lt-title{
   text-align: center;
   font-size: 70px;
@@ -73,12 +76,18 @@ padding: 110px;
   background: linear-gradient(to bottom, #ffffff 70%,#0fabff 125%);
   border-color: #000756;
 }
+/* Footer */
+.link-cs{
+  padding-top: 55px !important;
+}
 .Footer_Background{
   color: #ffffff;
-  background-image: url("/images/Footer002.jpg")
-  
+  background-image: url("/images/Footer002.jpg");
 }
-
+.col{
+  margin: 0;
+  padding: 0;
+}
 .social-icons{
   width: 50px;
   height: 50px;
@@ -93,8 +102,8 @@ padding: 110px;
 }
 .sub{
   display: flex;
-  height: 50px;
+  height: 30px;
 }
 .sub2{
-  height: 50px;
+  height: 30px;
 }
