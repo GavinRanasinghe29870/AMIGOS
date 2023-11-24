@@ -20,4 +20,10 @@ $sql = "INSERT INTO reg (phoneno, fname, password,country,gender,dob) VALUES ('$
 
 if ($conn->query($sql) === TRUE) {
     echo "Data inserted successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
+
+$conn->close();
+?>
