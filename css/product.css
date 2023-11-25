@@ -28,3 +28,16 @@
     background-color: #000000;
     border-color: #000000;
   }
+  .container
+  {
+    margin-left: 3%;
+    align-items:center;
+    padding-top: 3%;
+    
+  }
+  .container-2
+  {
+    padding-left: 74%;
+    color: #0fabff;
+    padding-top: 2%;
+  }
