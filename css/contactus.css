@@ -33,3 +33,76 @@
     background-color: #000000;
     border-color: #000000;
   }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700&display=swap');
+
+
+section{
+    position: relative;
+    z-index: 3;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container{
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.section-header{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-header h2{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.section-header p{
+    color: rgb(125, 117, 117);
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-info{
+    width: 50%;
+}
+
+.contact-info-item{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.contact-info-icon{
+    height: 100px;
+    width: 100px;
+   text-align: center;
+
+}
+
+
+.contact-info-content{
+    margin-left: 20px;
+}
+
+.contact-info-content h4{
+    color: rgb(31, 167, 213);
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.contact-info-content p{
+    color: #fff;
+    font-size: 1em;
+}
+
