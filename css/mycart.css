@@ -51,3 +51,43 @@ margin-right: 30px;
 .Select{
 display: flex;
 }
+.btnc-2 {
+  color: #000;
+  background-color:aqua;
+  border-color: #002956;
+}
+.btnc-2:hover {
+  color: #ffffff;
+  background-color: #000000;
+  border-color: #000000;
+}
+.link-cs{
+  padding-top: 55px !important;
+}
+.Footer_Background{
+  color: #ffffff;
+  background-image: url("/images/Footer002.jpg");
+}
+.col{
+  margin: 0;
+  padding: 0;
+}
+.social-icons{
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  float: left;
+  line-height: 20px;
+  font-size: 10px;
+  color: #000;
+  background: white;
+  margin-right: 25px;
+  cursor: pointer;
+}
+.sub{
+  display: flex;
+  height: 30px;
+}
+.sub2{
+  height: 30px;
+}
