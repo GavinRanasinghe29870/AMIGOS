@@ -64,6 +64,22 @@ display: flex;
 .link-cs{
   padding-top: 55px !important;
 }
+.remove-item-btn {
+  float: right;
+}
+table {
+  border-spacing: 10px; 
+}
+input[type="number"] {
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  border: 1px solid #570505;
+  font-size: 12px;
+}
+
+
+
 .Footer_Background{
   color: #ffffff;
   background-image: url("/images/Footer002.jpg");
