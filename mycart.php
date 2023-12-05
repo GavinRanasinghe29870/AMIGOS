@@ -1,3 +1,15 @@
+<?php
+include 'connect.php';
+//update query
+$update_value=$_POST['update_quantity'];
+$update_id=$_POST['update_quantity_id'];
+//query
+$update_quantity_query=mysqli_query($conn,"update 'cart' set quantity=$update_value where id=$update_id");
+if($update_quantity_query){
+  header('location:mycart.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,32 +75,31 @@
                     <div class="responsive-table">
                       
                   <table>
-                     
-                    <tr>
-                      <td style="padding: 5px;"> <colspan="2"></td>
-                      <td><label for="checkbox-id">
-                        <input type="checkbox" id="checkbox-id">
-                        <img src="path/to/your/image1.png" alt="Image of product">
-                      </label></td>
-                      
-                      <td  style="padding: 30px;">Description</td>
-                      <td style="padding: 20px;" ><span><p class="unit">  <input type="number"min="1"  id="quantity"  class="form-control form-control-sm" value="1"    ></p></td>  
-                      <td    >LKR <td>1000</td></td>
-                      <td  style="padding: 30px;"><button class="remove-item-btn">Remove</button></td>
-                      </tr>
-
+                     <?php
+                     while($fetch_cart_products=mysqli_fetch_assoc($select_cart_products)){
+                      ?>
                       <tr>
-                       <td style="padding: 5px;"> <colspan="2"></td>
-                       <td><label for="checkbox-id">
-                        <input type="checkbox" id="checkbox-id">
-                        <img src="path/to/your/image2.png" alt="Image of product">
-                      </label></td>
-                      
-                       <td  style="padding: 30px;">Description</td>
-                       <td  style="padding: 20px;"><span><p class="unit">  <input type="number" min="1" id="quantity" class="form-control form-control-sm"  value="1"  ></p></td>
-                       <td   >LKR <td>2000</td></td>
-                       <td  style="padding: 30px;" ><button class="remove-item-btn">Remove</button></td>
-                       </tr>
+                        <td style="padding: 5px;"> <colspan="2"></td>
+                        <td><?php echo $fetch_cart_products['id']?></td>
+                        <td>
+                         <img src="path/to/your/image2.png" alt="Image of product">
+                       </td>
+                       
+                        <td  style="padding: 30px;">Description</td>
+                        <form action="" method="post">
+                          <input type="hidden" value="<?php echo $fetch_cart_products['id']?>" name="update_quantity_id">  
+                        <td><input type="number"class="form-control form-control-sm"  value="<?php echo $fetch_cart_products['quantity'] ?>" name="update_quantity"></p></td>
+                      </form>
+                        <td>LKR <td>2000</td></td>
+                        <td  style="padding: 30px;" ><button class="remove-item-btn">Remove</button></td>
+                        </tr>
+
+                       <?php
+                       $grand_total+=($fetch_cart_products['price']*$fetch_cart_products['quantity'])+$fetch_cart_products['shippingfee'];
+                     }
+                     ?>
+                     
+                    
                   </table>
                     
                     
@@ -105,17 +116,17 @@
                       <tr>
                         
                         <td colspan="2">Sub Total</td>
-                        <td><span>20$</span></td>
+                        <td>LKR<?php echo $subtotal= ($fetch_cart_products['price']*$fetch_cart_products['quantity'])?>/-</td>
                       </tr>
                       <tr>
                        
                         <td colspan="2">Shipping Fee</td>
-                        <td><span>5$</span></td>
+                        <td>LKR<?php $fetch_cart_products['shippingfee']?>/-</span></td>
                       </tr>
                       <tr>
                             
                         <td colspan="2"><b>Grand Total</b> </td>
-                        <td><span>25$</span></td>
+                        <td><span>LKR<?php echo $grand_total?>/-</span></td>
                       </tr>
                   </table>
                   <center>
