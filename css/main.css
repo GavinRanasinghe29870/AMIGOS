@@ -107,3 +107,22 @@ padding: 110px;
 .sub2{
   height: 30px;
 }
+
+fieldset{
+  background-color: #0000008f;
+}
+.btnc-2{
+color: #000;
+    background-color:aqua !important;
+    border-color: #0162ca;
+    
+}
+.btnc-2:hover{
+  color: #ffffff;
+    background-color: #000000b0;
+    border-color: #f7f3f3;
+}
+
+.row-cs{
+  padding: 110px;
+}
