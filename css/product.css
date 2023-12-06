@@ -41,3 +41,54 @@
     color: #0fabff;
     padding-top: 2%;
   }
+  .arduino-products
+  {
+    color: #0fabff;
+    margin-left: 3%;
+  }
+  
+  .card-text-coustom{
+    color: rgb(2, 17, 147);
+  }
+  .card-subtitle-coustom{
+    color: #002956;
+    font-style: bold;
+  }
+  .card-title-coustom{
+    color: black;
+    font-style: bold;
+  }
+  .coustom-card{
+    height: 30rem;
+  }
+  .card-cs{
+    margin-left: 4%;
+  }
+.row-cs{
+  padding: 110px;
+}
+
+  .coustom-card:hover{
+    background: linear-gradient(to bottom, #ffffff 70%,#0fabff 125%);
+    border-color: #000756;
+  }
+.btn-coustom {
+  color: #000;
+  background-color: aqua !important;
+  border-color: #002956;
+  }
+.btn-coustom:hover {
+    color: #ffffff !important;
+    background-color: #000000 !important;
+    border-color: #000000;
+  }
+  .btnc-2
+  {
+    color: #ffffff;
+  }
+  
+  .micro-bit-products
+  {
+    color: #0fabff;
+    margin-left: 3%;
+  }
