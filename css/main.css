@@ -1,7 +1,7 @@
 /* BG image */
 
 .bgimg-1{
-  background-image: url("/images/Bg_1.jpg");
+  background-image: url("../images/Bg_1.jpg");
   max-height: 500px;
 }
 .bgimg-1{
@@ -82,7 +82,7 @@ padding: 110px;
 }
 .Footer_Background{
   color: #ffffff;
-  background-image: url("/images/Footer002.jpg");
+  background-image: url("../images/Footer002.jpg");
 }
 .col{
   margin: 0;
