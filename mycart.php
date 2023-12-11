@@ -66,7 +66,34 @@ if($update_quantity_query){
                   
                   <p>SELECT ALL</p>
                   <div class="ml-auto pt-2 pr-2">
-                  <button type="button" class="btn-sm btn-outline-danger">DeleteAll <img src="/images/DeleteIcon.png" alt="deletebtn" width="25px"></button>
+                  <button type="button" class="btn-sm btn-outline-danger"><?php
+
+session_start();
+
+
+if (isset($_POST['delete_all'])) {
+    
+    $_SESSION['cart'] = array();
+    
+    ;
+}
+
+// Sample cart display (you need to adjust this based on your implementation)
+echo "Cart Items: ";
+if (isset($_SESSION['cart'])) {
+    foreach ($_SESSION['cart'] as $item) {
+        echo $item . ", ";
+    }
+} else {
+    echo "Empty";
+}
+?>
+
+<!-- HTML form to trigger the "delete all" action -->
+<form method="post">
+    <input type="submit" name="delete_all" value="Delete All">
+</form>
+ <img src="/images/DeleteIcon.png" alt="deletebtn" width="25px"></button>
                 </div>
                 </div>
 
