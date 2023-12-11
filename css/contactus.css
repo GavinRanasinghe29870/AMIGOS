@@ -195,3 +195,28 @@ section{
     width: 100%;
 }
 }
+.Footer_Background{
+  color: #ffffff;
+  background-image: url("/images/Footer002.jpg")
+  
+}
+
+.social-icons{
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  float: left;
+  line-height: 20px;
+  font-size: 10px;
+  color: #000;
+  background: white;
+  margin-right: 25px;
+  cursor: pointer;
+}
+.sub{
+  display: flex;
+  height: 50px;
+}
+.sub2{
+  height: 50px;
+}
