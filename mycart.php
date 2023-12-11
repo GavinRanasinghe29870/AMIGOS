@@ -117,6 +117,16 @@ if($update_quantity_query){
                         
                         <td colspan="2">Sub Total</td>
                         <td>LKR<?php echo $subtotal= ($fetch_cart_products['price']*$fetch_cart_products['quantity'])?>/-</td>
+                        <?php
+                         $subtotal = 0;
+
+                         // htto mata ba
+                       foreach ($_SESSION['cart'] as $item) {
+                       $subtotal += $item['price'] * $item['quantity'];
+                      }
+                      echo "Subtotal: $".$subtotal;
+                      ?>
+
                       </tr>
                       <tr>
                        
@@ -124,9 +134,12 @@ if($update_quantity_query){
                         <td>LKR<?php $fetch_cart_products['shippingfee']?>/-</span></td>
                       </tr>
                       <tr>
-                            
-                        <td colspan="2"><b>Grand Total</b> </td>
-                        <td><span>LKR<?php echo $grand_total?>/-</span></td>
+                            <td colspan="2"><b>Grand Total</b> </td>
+                            <td><span>LKR<?php echo $grand_total?>/-</span></td>
+                            <?php
+                             $grand_total = $subtotal + $shipping_fee;
+                             echo "Grand Total: $".$grand_total;
+                             ?>
                       </tr>
                   </table>
                   <center>
