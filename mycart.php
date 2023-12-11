@@ -90,7 +90,7 @@ if($update_quantity_query){
                           <input type="hidden" value="<?php echo $fetch_cart_products['id']?>" name="update_quantity_id">  
                         <td><input type="number"class="form-control form-control-sm"  value="<?php echo $fetch_cart_products['quantity'] ?>" name="update_quantity"></p></td>
                       </form>
-                        <td>LKR <td>2000</td></td>
+                        <td>LKR <?php echo $fetch_cart_products['price'];?></td>
                         <td  style="padding: 30px;" ><button class="remove-item-btn">Remove</button></td>
                         </tr>
 
