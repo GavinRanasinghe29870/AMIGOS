@@ -124,6 +124,9 @@ if($update_quantity_query){
                         <td colspan="2">Shipping Fee</td>
                         <td>LKR<?php $fetch_cart_products['shippingfee']?>/-</span></td>
                       </tr>
+                      <tr>
+                        <td colspan="2"><b>Grand total</b></td>
+                        <td><span>LKR <?php echo $grand_total;?>/-</span></td>
                     
                   </table>
                   <center>
