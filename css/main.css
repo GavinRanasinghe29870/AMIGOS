@@ -1,6 +1,6 @@
 
 .bgimg-1{
-  background-image: url("/images/Bg_1.jpg");
+  background-image: url("/images/Background\ Gradient.png");
   max-height: 500px;
 }
 .bgimg-1{
@@ -23,56 +23,7 @@
     font-size: 25px;
     margin-right: 20px;
 }
-.btn-coustom {
-    color: #000;
-    background-color:aqua;
-    border-color: #002956;
-  }
-.btn-coustom:hover {
-    color: #ffffff;
-    background-color: #000000;
-    border-color: #000000;
-  }
-.carousel-inner {
-    padding: 1em;
-}
 
-.Trd-title{
-  text-align: center;
-  font-size: 90px;
-  color: white;
-}
-.card-text-coustom{
-  color: rgb(2, 17, 147);
-}
-.card-subtitle-coustom{
-  color: #002956;
-  font-style: bold;
-}
-.card-title-coustom{
-  color: black;
-  font-style: bold;
-}
-.coustom-card{
-  height: 30rem;
-}
-.card-cs{
-  margin-left: 10%;
-}
-.row-cs{
-padding: 110px;
-}
-
-.Lt-title{
-  text-align: center;
-  font-size: 70px;
-  color: white;
-}
-
-.coustom-card:hover{
-  background: linear-gradient(to bottom, #ffffff 70%,#0fabff 125%);
-  border-color: #000756;
-}
 .Footer_Background{
   color: #ffffff;
   background-image: url("/images/Footer002.jpg")
@@ -98,3 +49,28 @@ padding: 110px;
 .sub2{
   height: 50px;
 }
+/*menu*/
+
+.box_txt{
+  color: black;
+  font-size: 25px;
+  text-align: center;
+}
+.table_txt{
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  font-style: bold;
+}
+
+
+.table_action_shipping{
+  butt
+  color: white;
+  border-radius: 30%;
+  background-color: blue;
+  font-size: 18px;
+  border: red;
+  text-align: center;
+  
+  }
