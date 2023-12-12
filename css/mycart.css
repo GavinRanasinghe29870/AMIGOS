@@ -33,6 +33,26 @@ background-size: cover;
   background-color: #000000;
   border-color: #000000;
 }
+.btn-2{
+  color: #000;
+    background-color:aqua;
+    border-color: #002956;
+}
+.btn-2:hover{
+  color: #ffffff;
+    background-color: #000000;
+    border-color: #000000;
+}
+.btn-3{
+    color: #000;
+    background-color:aqua;
+    border-color: #002956;
+}
+.btn-3:hover{
+    color: #000;
+    background-color:aqua;
+    border-color: #002956;
+}
 h1{
 color: blanchedalmond;
 font-size: 5vw;

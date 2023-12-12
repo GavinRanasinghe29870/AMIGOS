@@ -59,9 +59,15 @@ if($update_quantity_query){
                     
                 </ul>
                 <div class="btn ml-auto btn-coustom">
-                    <img src="/images/Sign-icon.png" alt="" width="30px">
-                    Sign in
-                </div>
+                        <img src="./images/Sign-icon.png" alt="signin" width="30px">
+                        Sign in
+                    </div>
+                    <div class="btn ml-2 btn-2" >
+                      <img src="./images/Sign-icon.png" alt="profile" width="30px">                     
+                  </div>
+                    <div class="btn ml-2 btn-3">
+                      <img src="./images/mycart-navicon.png" alt="mycart" width="30px">
+                  </div>
             </div>
         </div>
     </nav>

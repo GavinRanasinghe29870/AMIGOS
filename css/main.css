@@ -35,16 +35,25 @@
     background-color: #000000;
     border-color: #000000;
   }
+.btn-2{
+  color: #000;
+    background-color:aqua;
+    border-color: #002956;
+}
+.btn-2:hover{
+  color: #ffffff;
+    background-color: #000000;
+    border-color: #000000;
+}
+
   /* Carousel */
 .carousel-inner {
     padding: 1em;
 }
-/* Trending prod. Cards */
-.Trd-title{
-  text-align: center;
-  font-size: 90px;
-  color: white;
+.caro{
+  padding-top: 60px;
 }
+/* Trending prod. Cards */
 .card-text-coustom{
   color: rgb(2, 17, 147);
 }
@@ -65,13 +74,13 @@
 .row-cs{
 padding: 110px;
 }
-/* latest event carousel*/
-.Lt-title{
-  text-align: center;
-  font-size: 70px;
-  color: white;
+.hero-section {
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
 }
-
+/* latest event carousel*/
 .coustom-card:hover{
   background: linear-gradient(to bottom, #ffffff 70%,#0fabff 125%);
   border-color: #000756;
@@ -109,7 +118,7 @@ padding: 110px;
 }
 
 fieldset{
-  background-color: #0000008f;
+  background-color: #00000086;
 }
 .btnc-2{
 color: #000;
