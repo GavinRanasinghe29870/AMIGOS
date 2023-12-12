@@ -5,8 +5,9 @@ if(isset($_POST["add_to_cart"])){
   $products_price=$_POST["product_price"];
   $products_image=$_POST["product_image"];
   $product_quantity="1"
-
-  $select_cart=mysqli_query($conn,"select * from `cart` where name='$products_name'");
+?>
+<?php
+  $select_cart=mysqli_query($connect,"Select * from cart where name='$products_name'");
   if(mysqli_num_rows($select_cart)>0){
     $display_message="product already added to cart";
   }else{
@@ -130,7 +131,7 @@ if($update_quantity_query){
                   echo"<div class='display_message'>
                   <span>$display_message</span>
                   <i class='fas fa-times' onClick='this.parentElemet.style.display=`none`;'></i>
-                  </div> "
+                  </div> ";
                   }
                  }
                  
@@ -142,7 +143,7 @@ if($update_quantity_query){
                       if(mysqli_num_rows($select_products)>0){
                         while(
                         $fetch_product=mysqli_fetch_assoc($select_products)){
-                          eco $fetch_product['name'];
+                          echo $fetch_product['name'];
                           ?>
                         <form method="post" action="">
                         <div class="edit_form">
