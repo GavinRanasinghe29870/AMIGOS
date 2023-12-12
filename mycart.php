@@ -1,6 +1,20 @@
 <?php
 include 'connect.php';
-//update query
+if(isset($_POST["add_to_cart"])){
+  $products_name=$_POST["product_name"];
+  $products_price=$_POST["product_price"];
+  $products_image=$_POST["product_image"];
+  $product_quantity="1"
+
+  $select_cart=mysqli_query($conn,"select * from `cart` where name='$products_name'");
+  if(mysqli_num_rows($select_cart)>0){
+    $display_message="product already added to cart";
+  }else{
+    //insert cart data in cart table
+    $insert_products=mysqli_query($conn,"insert into `cart`(name,price,image,quantity)values('$products_name', '$products_price',$products_image','$product_quantity')");
+    $display_message="product added to cart";
+  }
+}
 $update_value=$_POST['update_quantity'];
 $update_id=$_POST['update_quantity_id'];
 //query
@@ -90,7 +104,7 @@ if($update_quantity_query){
                           <input type="hidden" value="<?php echo $fetch_cart_products['id']?>" name="update_quantity_id">  
                         <td><input type="number"class="form-control form-control-sm"  value="<?php echo $fetch_cart_products['quantity'] ?>" name="update_quantity"></p></td>
                       </form>
-                        <td>LKR <td>2000</td></td>
+                        <td>LKR <?php echo $fetch_cart_products['price'];?></td>
                         <td  style="padding: 30px;" ><button class="remove-item-btn">Remove</button></td>
                         </tr>
 
@@ -98,25 +112,62 @@ if($update_quantity_query){
                        $grand_total+=($fetch_cart_products['price']*$fetch_cart_products['quantity'])+$fetch_cart_products['shippingfee'];
                      }
                      ?>
-                     
-                    
                   </table>
-                    
-                    
-                     
-                    
-                    
+                  </fieldset>
+                 </div>
                 
-            </fieldset>
-          </div>
+                 
+                 <div class="container">
+                 <?php
+                 if(isset($display_message)){
+                  foreach($display_message as $display_message){
+                  echo"<div class='display_message'>
+                  <span>$display_message</span>
+                  <i class='fas fa-times' onClick='this.parentElemet.style.display=`none`;'></i>
+                  </div> "
+                  }
+                 }
+                 
+                 ?>
+                  <section class="products">
+                    <div class="product_container">
+                      <?php
+                      $select_products=mysqli_query($conn,"select * from` products` ");
+                      if(mysqli_num_rows($select_products)>0){
+                        while(
+                        $fetch_product=mysqli_fetch_assoc($select_products)){
+                          eco $fetch_product['name'];
+                          ?>
+                        <form method="post" action="">
+                        <div class="edit_form">
+                          <img src="images/<?php echo $fetch_product ['image']?>" alt="">
+                          <h3><?php echo $fetch_product['name']?></h3>
+                          <div class="price">price:<?php echo $fetch_product['price']?>/-<div>
+                            <input type="hidden" name="product_name"value="<?php echo $fetch_product['name']?>">
+                            <input type="hidden" name="product_price"value="<?php echo $fetch_product['price']?>">
+                            <input type="hidden" name="product_image" value="<?php echo $fetch_product ['image']?>">
+                            <input type="submit" class="submit_btn cart_btn" value="Add to cart" name="add_to_cart">
+                    </div>
+                    </form>
+                    <?php
+                        }
+                        
+                      }else{
+                        echo "<div class='empty_text' >No prodcuts available</div>";
+                      }
+
+
+
+?>      
           <!-- Second Grid -->
           <div class="col">
             <div class="field-2">
                 <table class="table">
                       <tr>
-                        
+
                         <td colspan="2">Sub Total</td>
                         <td>LKR<?php echo $subtotal= ($fetch_cart_products['price']*$fetch_cart_products['quantity'])?>/-</td>
+
                       </tr>
                       <tr>
                        
@@ -124,10 +175,9 @@ if($update_quantity_query){
                         <td>LKR<?php $fetch_cart_products['shippingfee']?>/-</span></td>
                       </tr>
                       <tr>
-                            
-                        <td colspan="2"><b>Grand Total</b> </td>
-                        <td><span>LKR<?php echo $grand_total?>/-</span></td>
-                      </tr>
+                        <td colspan="2"><b>Grand total</b></td>
+                        <td><span>LKR <?php echo $grand_total;?>/-</span></td>
+                    
                   </table>
                   <center>
 
