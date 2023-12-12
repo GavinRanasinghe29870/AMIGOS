@@ -1,12 +1,13 @@
 <?php
 include 'connect.php';
-if(isset($_POST["add_to_cart"])){
+if(isset($_POST['add to cart'])){
   $products_name=$_POST["product_name"];
   $products_price=$_POST["product_price"];
   $products_image=$_POST["product_image"];
-  $product_quantity="1"
-
-  $select_cart=mysqli_query($conn,"select * from `cart` where name='$products_name'");
+ 
+}
+ 
+  $select_cart=mysqli_query($conn,"select * from `cart` where name='$products_name' " );
   if(mysqli_num_rows($select_cart)>0){
     $display_message="product already added to cart";
   }else{
@@ -14,13 +15,24 @@ if(isset($_POST["add_to_cart"])){
     $insert_products=mysqli_query($conn,"insert into `cart`(name,price,image,quantity)values('$products_name', '$products_price',$products_image','$product_quantity')");
     $display_message="product added to cart";
   }
+
+if(isset($_POST['update_product_quantity'])){
+  $update_value=$_POST['updtae_quantity'];
+  //echo $update_value;
+  $update_id=$_POST['update_quantity_id'];
+  //echo $update_id;
+  //query
+  $update_quantity_query=mysqli_query($conn,"update `cart` set quantity=$update_value where id=$updtae_id");
+  if($update_quantity_query){
+    header('location:cart.php');
+  }
 }
-$update_value=$_POST['update_quantity'];
-$update_id=$_POST['update_quantity_id'];
-//query
-$update_quantity_query=mysqli_query($conn,"update 'cart' set quantity=$update_value where id=$update_id");
-if($update_quantity_query){
-  header('location:mycart.php');
+
+if(isset($_GET['remove'])){
+  $remove_id=$_GET['remove'];
+  //echo $remove_id;
+  mysqli_query($conn,"Delete from `cart` where id=$remove_id");
+
 }
 ?>
 
@@ -123,8 +135,8 @@ if($update_quantity_query){
                   foreach($display_message as $display_message){
                   echo"<div class='display_message'>
                   <span>$display_message</span>
-                  <i class='fas fa-times' onClick='this.parentElemet.style.display=`none`;'></i>
-                  </div> "
+                  <i class='fas fa-times' onClick='this.parentElemet.style.display=`none`';></i>
+                  </div> ";
                   }
                  }
                  
@@ -136,7 +148,7 @@ if($update_quantity_query){
                       if(mysqli_num_rows($select_products)>0){
                         while(
                         $fetch_product=mysqli_fetch_assoc($select_products)){
-                          eco $fetch_product['name'];
+                          echo $fetch_product['name'];
                           ?>
                         <form method="post" action="">
                         <div class="edit_form">
