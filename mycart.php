@@ -1,6 +1,6 @@
 <?php
 include 'connect.php';
-if(isset($_POST['add to cart'])){
+if(isset($_POST['add_ to_ cart'])){
   $products_name=$_POST["product_name"];
   $products_price=$_POST["product_price"];
   $products_image=$_POST["product_image"];
@@ -12,7 +12,7 @@ if(isset($_POST['add to cart'])){
     $display_message="product already added to cart";
   }else{
     //insert cart data in cart table
-    $insert_products=mysqli_query($conn,"insert into `cart`(name,price,image,quantity)values('$products_name', '$products_price',$products_image','$product_quantity')");
+    $insert_products=mysqli_query($conn,"insert into `cart`(name,price,image,quantity)values('$products_name', '$products_price','$products_image','$product_quantity')");
     $display_message="product added to cart";
   }
 
@@ -132,7 +132,7 @@ if(isset($_GET['remove'])){
                  <div class="container">
                  <?php
                  if(isset($display_message)){
-                  foreach($display_message as $display_message){
+                  foreach($display_message as $message){
                   echo"<div class='display_message'>
                   <span>$display_message</span>
                   <i class='fas fa-times' onClick='this.parentElemet.style.display=`none`';></i>
